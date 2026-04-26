@@ -368,6 +368,36 @@ footer {
   .contact-info p {
     margin: 1rem 0;
   }
+  nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.7rem;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .nav-right {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
+
+  .language-dropdown {
+    font-size: 0.9rem;
+  }
+
 }
 
 
