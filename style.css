@@ -60,6 +60,11 @@ nav a {
 
 .selected-language {
   padding: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .selected-language::after {
@@ -100,6 +105,10 @@ nav a {
 }
 
 .language-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.language-dropdown:focus-within .dropdown-menu {
   display: block;
 }
 
