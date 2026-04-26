@@ -1,0 +1,468 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  height: 100px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* LANGUAGE DROPDOWN */
+
+.language-dropdown {
+  position: relative;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.selected-language {
+  padding: 0.5rem;
+}
+
+.selected-language::after {
+  content: "▼";
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.language-dropdown:hover .selected-language::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  display: none;
+  min-width: 100px;
+
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.language-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* HERO */
+
+.hero {
+  height: 100vh;
+  background-image: url("images/hero.jpeg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+
+  background-color: white;
+  color: black;
+  text-decoration: none;
+
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+
+
+#studios {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.studios-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.studio-card {
+  width: 100%;
+  max-width: 250px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.studio-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.studio-card h3 {
+  margin: 1rem;
+}
+
+.studio-card p {
+  margin: 0 1rem 1rem;
+  color: #555;
+}
+
+.studio-card a {
+  display: block;
+  margin: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+
+.studio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+/* RESERVATION SECTION */
+
+#reservation {
+  padding: 3rem 2rem;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+#reservation h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* FORM */
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* INPUTS */
+
+form input,
+form select,
+form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* TEXTAREA */
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* BUTTON */
+
+form button {
+  padding: 0.9rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #333;
+}
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: black;
+}
+.reservation-note {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+
+
+#contact-us {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* 🔥 σημαντικό */
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* LEFT SIDE */
+.contact-info {
+  background-color: #f5f5f5;
+  padding: 2rem;
+  border-radius: 10px;
+
+  max-width: 400px;
+  width: 100%;
+
+  text-align: left; /* 🔥 για καλύτερη ανάγνωση */
+}
+
+/* RIGHT SIDE */
+.map {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* MAP FIX */
+.map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: white;
+}
+
+.footer-bottom {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 600px) {
+  #studios {
+    padding: 2rem 1rem;
+  }
+
+  .studios-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .studio-card {
+    max-width: 100%;
+  }
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+  .contact-info p {
+    margin: 1rem 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* LUME */
+
+/* STUDIO DETAIL PAGES */
+
+.studio-hero {
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: white;
+}
+
+.lume-hero {
+  background-image: url("images/lume-card.jpeg");
+}
+
+.cadre-de-lacropole-hero {
+  background-image: url("images/cadre-card.jpeg");
+}
+
+.harmony-hero {
+  background-image: url("images/harmony-card.jpeg");
+}
+.urban-boho-hero {
+  background-image: url("images/urban-boho-card.jpeg");
+}
+.studio-page-section {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.studio-description {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* SIMPLE HORIZONTAL SLIDER */
+
+.slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem;
+}
+
+.slider img {
+  width: 80%;
+  max-width: 700px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+/* AMENITIES */
+
+.amenities {
+  max-width: 800px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.amenities div {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* CTA */
+
+.studio-cta {
+  text-align: center;
+  padding: 2rem;
+}

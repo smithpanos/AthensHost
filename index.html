@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athens Host</title>
+    <link rel="icon" type="image/png" href="images/favicon-white-background.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a href="/">
+                <img src="images/logo.png" alt="Athens Host Logo" class="logo">
+            </a>
+
+            <div class="nav-right">
+                <ul>
+                    <li><a href="#landing-page"> Αρχική</a> </li>
+                    <li><a href="#studios"> Στούντιο</a> </li>
+                    <li><a href="#reservation"> Κράτηση</a> </li>
+                    <li><a href="#contact-us"> Επικοινωνία</a> </li>
+                </ul>
+            </div>
+
+            <div class="language-dropdown">
+
+                <div class="selected-language">
+                    🇬🇷 GR
+                </div>
+
+                <div class="dropdown-menu">
+                    <a href="index.html">🇬🇷 GR</a>
+                    <a href="index-en.html">🇬🇧 EN</a>
+                </div>
+
+            </div>
+            
+        </nav>
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+        <section id="landing-page" class="hero">
+            <div class="hero-content">
+                <h1>Μείνετε στην καρδιά της Αθήνας!</h1>
+                <p>Άνετα στούντιο στην καρδιά της Αθήνας.</p>
+                <a href="#studios" class="hero-button">Δες τα στούντιο</a>
+            </div>
+        </section>
+
+        <section id="studios">
+
+            <h2>Τα Στούντιο μας</h2>
+
+            <div class="studios-container">
+
+            <div class="studio-card">
+                <img src="images/lume-card.jpeg" alt="lume">
+                <h3>Lume</h3>
+                <p>Premium εμπειρία διαμονής.</p>
+                <a href="Lume.html">Δείτε περισσότερα</a>
+            </div>
+
+            <div class="studio-card">
+                <img src="images/harmony-card.jpeg" alt="harmony">
+                <h3>Harmony</h3>
+                <p>Περισσότερος χώρος και άνεση.</p>
+                <a href="harmony.html">Δείτε περισσότερα</a>
+            </div>
+
+            <div class="studio-card">
+                <img src="images/cadre-card.jpeg" alt="CadreDeLacropole">
+                <h3>Cadre De L'acropole</h3>
+                <p>Άνετο και οικονομικό στούντιο.</p>
+                <a href="cadre-de-lacropole.html">Δείτε περισσότερα</a>
+            </div>
+
+            <div class="studio-card">
+                <img src="images/urban-boho-card.jpeg" alt="Urban Boho">
+                <h3>Urban Boho</h3>
+                <p>Άνετο και οικονομικό στούντιο.</p>
+                <a href="urban-boho.html">Δείτε περισσότερα</a>
+            </div>
+
+            </div>
+        </section>
+
+
+
+        <section id="reservation">
+            <h2>Κάντε κράτηση</h2>
+
+            <p class="reservation-note">
+                Θα σας απαντήσουμε άμεσα ως προς τη διαθεσιμότητα και το κόστος στο email σας!
+            </p>
+
+            <form id="reservation-form" name="reservation" method="POST">
+                <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Τηλέφωνο">
+
+                <select name="studio" required>
+                <option value="">Επιλέξτε στούντιο</option>
+                <option value="lume">Lume</option>
+                <option value="harmony">Harmony</option>
+                <option value="cadre-de-lacropole">Cadre De L'Acropole</option>
+                <option value="urban-boho">Urban Boho</option>
+                </select>
+
+                <input type="date" name="checkin" required>
+                <input type="date" name="checkout" required>
+
+                <textarea name="message" placeholder="Μήνυμα"></textarea>
+
+                <button type="submit">Αποστολή</button>
+                <p id="success-message" style="display:none; color: green;"> Η αίτησή σας στάλθηκε με επιτυχία! </p>
+            </form>
+        </section>
+
+
+        <section id="contact-us">
+            <h2>Επικοινωνία</h2>
+
+            <div class="contact-container">
+
+                <div class="contact-info">
+                    <p><strong>Τοποθεσία:</strong> Μενάνδρου 39, Ομόνοια </p>
+                    <p>T.K. 10437 Αθήνα, Ελλάδα</p>
+                    <p><strong>Email:</strong> <a href="mailto:athenshost2024@gmail.com">athenshost2024@gmail.com</a></p>
+                    <p><strong>Τηλέφωνο:</strong> <a href="tel:+306940311888">+30 694 0311 888</a></p>
+                </div>
+
+                <div class="map">
+                    <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d786.1869346544873!2d23.724326156079773!3d37.9830160120014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd882eb0cf03%3A0x2a80cbbec67828b7!2sAthens%20Host!5e0!3m2!1sel!2sgr!4v1777204955652!5m2!1sel!2sgr"
+                    width="100%"
+                    height="300"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <script>
+            const form = document.getElementById("reservation-form");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const button = form.querySelector("button");
+                const successMessage = document.getElementById("success-message");
+
+                button.disabled = true;
+                button.innerText = "Αποστολή...";
+                successMessage.style.display = "none";
+
+                const formData = new FormData(form);
+
+                fetch("https://script.google.com/macros/s/AKfycbxmH7WTmoajnVEOL1sN3PLld0jQ6zSfjylNzEUK89Cth-7KOFqo3uWAI_WaL86N_HQ9/exec", {
+                method: "POST",
+                body: formData
+                })
+                .then(response => response.text())
+                .then(data => {
+                successMessage.style.display = "block";
+                form.reset();
+
+                button.disabled = false;
+                button.innerText = "Αποστολή";
+                })
+                .catch(error => {
+                alert("Κάτι πήγε στραβά. Παρακαλώ δοκιμάστε ξανά.");
+                console.error(error);
+
+                button.disabled = false;
+                button.innerText = "Αποστολή";
+                });
+            });
+        </script>
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p class="footer-bottom">© 2024 Athens Host. All rights reserved.</p>
+        <p class="footer-bottom"> Powered by Athens Host</p>
+    
+    </footer>
+
+</body>
+
+</html>
